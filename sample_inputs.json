@@ -1,0 +1,29 @@
+[
+  {
+    "customer_id": "C001",
+    "complaint_text": "My product arrived completely broken. I have contacted support three times and nobody has replied. This is absolutely unacceptable.",
+    "customer_tenure_years": 0.2,
+    "previous_complaints": 3,
+    "order_value": 149.99,
+    "account_type": "standard",
+    "image_category": "damaged_product"
+  },
+  {
+    "customer_id": "C002",
+    "complaint_text": "The delivery was a bit late but the product is fine. Just wanted to let you know.",
+    "customer_tenure_years": 3.2,
+    "previous_complaints": 0,
+    "order_value": 29.99,
+    "account_type": "premium",
+    "image_category": "normal_product"
+  },
+  {
+    "customer_id": "C003",
+    "complaint_text": "Wrong item sent. I ordered a blue jacket and received a red one. Please resolve this urgently.",
+    "customer_tenure_years": 1.5,
+    "previous_complaints": 1,
+    "order_value": 89.99,
+    "account_type": "standard",
+    "image_category": "wrong_item"
+  }
+]

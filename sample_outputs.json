@@ -1,0 +1,85 @@
+[
+  {
+    "customer_id": "C001",
+    "model_outputs": {
+      "classical_score": 0.83,
+      "cnn_score": 0.5504,
+      "rnn_score": 1.0,
+      "final_score": 0.7971,
+      "risk_level": "high"
+    },
+    "llm_explanation": {
+      "summary": "The customer received a broken product and has not received a response after contacting support three times.",
+      "recommended_action": "escalate_immediately",
+      "reason": "The risk level is high due to the customer's repeated failed attempts to contact support and very high model confidence scores.",
+      "human_review_required": true,
+      "risk_notes": [
+        "Product was delivered completely damaged.",
+        "Customer reports three ignored support attempts, indicating a severe service bottleneck.",
+        "Model scores are critically high, with the RNN score at 1.0 and the final hybrid score at 0.7971."
+      ],
+      "source": "gemini"
+    },
+    "decision": {
+      "final_action": "manual_review",
+      "human_required": true,
+      "model_disagree": true,
+      "score_range": 0.4496
+    }
+  },
+  {
+    "customer_id": "C002",
+    "model_outputs": {
+      "classical_score": 0.04,
+      "cnn_score": 0.5244,
+      "rnn_score": 0.0,
+      "final_score": 0.1733,
+      "risk_level": "low"
+    },
+    "llm_explanation": {
+      "summary": "The customer reported a slightly delayed delivery but confirmed satisfaction with the product.",
+      "recommended_action": "auto_reply",
+      "reason": "The complaint is classified as low risk because the customer expressed overall satisfaction with the product and only provided informational feedback about a minor shipping delay.",
+      "human_review_required": false,
+      "risk_notes": [
+        "The final hybrid model score of 0.1733 is well below the threshold for escalation.",
+        "The customer explicitly stated the product is fine and intended the message only as a notification.",
+        "No negative sentiment, refund request, or urgent issues were detected in the text."
+      ],
+      "source": "gemini"
+    },
+    "decision": {
+      "final_action": "manual_review",
+      "human_required": true,
+      "model_disagree": true,
+      "score_range": 0.5244
+    }
+  },
+  {
+    "customer_id": "C003",
+    "model_outputs": {
+      "classical_score": 0.505,
+      "cnn_score": 0.4011,
+      "rnn_score": 0.5,
+      "final_score": 0.4723,
+      "risk_level": "medium"
+    },
+    "llm_explanation": {
+      "summary": "The customer received a red jacket instead of the blue one they ordered and requested an urgent resolution.",
+      "recommended_action": "manual_review",
+      "reason": "The complaint is classified as medium risk due to a final hybrid model score of 0.4723, indicating a standard incorrect item delivery that requires human verification.",
+      "human_review_required": true,
+      "risk_notes": [
+        "The final hybrid score of 0.4723 sits in the medium risk band, supported by consistent individual model scores around 0.4 to 0.5.",
+        "Although the customer requests urgent resolution, the issue is a standard fulfillment error (wrong color) rather than a high-risk legal or safety threat."
+      ],
+      "source": "gemini"
+    },
+    "decision": {
+      "final_action": "manual_review",
+      "human_required": true,
+      "model_disagree": false,
+      "score_range": 0.1039
+    }
+  }
+]
